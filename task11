@@ -1,0 +1,24 @@
+
+var form=document.getElementById('addForm');
+form.addEventListener('submit', saveToLocalStorage);
+
+
+function saveToLocalStorage(event){
+    event.preventDefault();
+    const name=event.target.username.value;
+    const email=event.target.emailID.value;
+    const phonenumber=event.target.phonenumber.value;
+    localStorage.setItem('name',name);
+    localStorage.setItem('email',email);
+    localStorage.setItem('phonenumber',phonenumber);
+    const obj={
+        name:name,
+        email:email,
+        phonenumber:phonenumber,
+    }
+      const a= localStorage.setItem('userdetails',JSON.stringify(obj));
+      console.log(localStorage);
+     let details=JSON.parse(localStorage.getItem('userdetails'));
+     console.log(details);
+
+}
