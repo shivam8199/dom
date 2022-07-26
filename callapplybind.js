@@ -20,3 +20,21 @@ var printage=function(student){
     return this.age
 }
 console.log(printage.call(student))
+
+//curring
+let multiply1=function(x,y)
+{
+    console.log(x*y)
+}
+    let multiplybytwo1=multiply1.bind(this,2)
+    multiplybytwo1(5);
+
+    let multiply2=function(x){
+        return function(y){
+            console.log(x*y)
+        }
+    }
+    let multiplybytwo2=multiply2(2)
+    multiplybytwo2(5);
+
+
