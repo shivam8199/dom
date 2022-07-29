@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="color:blueviolet;">Registration Form </h1>
+    <h1 style="color:blueviolet;">EXPENSE TRACKER</h1>
    <form action="" onsubmit="saveToLocalStorage(event)">
         <label for=":">Choose expenseAmount</label>
         <input type="number" name="amount" id="amount" required/>
